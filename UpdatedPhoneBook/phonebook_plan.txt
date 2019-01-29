@@ -1,0 +1,85 @@
+1. Phonebook
+
+2. Searchable databases:
+  a. businesses
+      - id number
+      - name of business
+      - description (category of the business)
+      - city
+      - postcode
+      - phone number
+  b. people
+      - id number
+      - name
+      - surname
+      - city
+      - postcode
+      - phone number
+
+3. user stories:
+  - businesses
+  - people
+
+4. data structure for the program
+    - database
+    - functions
+      a. business
+        - user input
+              - name + city or postcode
+              - type + city or postcode
+              - how to sort results
+          - output:
+              How to show the results:
+                  - 10 results sorted by alphabetically
+                  - 10 results sorted by distance
+              Data:
+                - business name
+                - business type
+                - city
+                - postcode
+                - phone number
+
+        b. people
+          - user input
+              - name + city or postcode
+          - output:
+                How to show the results:
+                    - 10 results sorted by alphabetically
+                    - 10 results sorted by distance
+                Data:
+                    - name
+                    - surname
+                    - city
+                    - postcode
+                    - phone number
+
+4. program (functions)
+  Two different files functions:
+
+    BUSINESS
+      - input function by asking:
+          - name or type of business
+          - city or postcode
+          - how to sort
+      - function retrieveData() to retrieve data from the database
+          - conditional
+            if sorting by name
+              call sortAlphabetically()
+            else:
+              call sortDistance()
+      - function sortAlphabetically() to sort results
+      - function sortDistance() to sort results
+
+    PEOPLE
+      - input function by asking:
+          - name and or surname
+          - city or postcode
+          - how to sort
+      - function retrieveData() to retrieve data from the database
+          - conditional
+            if sorting by name
+              call sortAlphabetically()
+            else:
+              call sortDistance()
+      - function sortAlphabetically() to sort results
+      - function sortDistance() to sort results

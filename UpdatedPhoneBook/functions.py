@@ -1,0 +1,134 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Jan 25 10:50:44 2019
+
+@author: mluci
+"""
+
+import sqlite3
+import requests
+
+conn = sqlite3.connect('phonebook.db')
+c = conn.cursor()
+
+
+def typePostcode():
+   userInputPostcode = input("Type in the postcode: ")
+   print(type(userInputPostcode))
+   c.execute('SELECT * FROM business WHERE postcode = ?', (userInputPostcode,) )
+   for row in c.fetchall():
+       print(row)
+       
+def getdbbiz():
+    userInputBusinessType= input("please enter business type: ")
+    print(userInputBusinessType)
+    c.execute(' SELECT * FROM business WHERE type = ?', userInputBusinessType, )
+       
+    
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Jan 25 09:27:18 2019
+
+@author: iza
+"""
+
+import sqlite3
+import requests
+
+conn = sqlite3.connect('phonebook.db') 
+c = conn.cursor()
+ 
+
+def typePostcode():
+    userInputPostcode = input("Type in the postcode: ").upper()
+
+    while len(userInputPostcode) < 6 or len(userInputPostcode)>8:
+        try:
+            print("Please enter full postcode")
+            userInputPostcode = input("Type in the postcode: ").upper()
+
+        except  len(userInputPostcode) == 3 or len(userInputPostcode) == 2:
+            print("Please enter both parts of the postcode")
+            userInputPostcode = input("Type in the postcode: ").upper()
+
+    
+    c.execute('SELECT * FROM business WHERE postcode = ?', (userInputPostcode,) )
+
+    resultsPC = c.fetchall()
+
+    if len(resultsPC ) == 0:
+        print("Sorry, nothing for this postcode! Try again.")
+        typePostcode()
+    else:
+        typeBizType(userInputPostcode)
+
+    
+def typeBizType(userInputPostcode):
+    userInputBizType = input("Type in biz type: ").title()
+    c.execute('SELECT * FROM business WHERE typeBusiness = ?', (userInputBizType,) )
+    resultsBT = c.fetchall()
+    
+    if len(resultsBT ) == 0:
+        print("Sorry, we have nothing! Try again.")
+        typeBizType(userInputPostcode)
+    else:
+        c.execute('SELECT * FROM business WHERE postcode = ? AND typeBusiness  = ?', (userInputPostcode, userInputBizType) )
+    for row in c.fetchall():
+        print(row)
+
+typePostcode()
+       
+          
+        
+        
+
+
+
+
+#def typeCity():
+#    userInputCity = input("Type in the city: ").title()
+#    userInputBizType = input("Type in biz type: ").title()
+#    c.execute('SELECT * FROM business WHERE city = ? AND typeBusiness  = ?', (userInputCity, userInputBizType) )
+#    for row in c.fetchall():
+#        print(row)
+#        
+#typeCity()   
+#
+
+
+
+
+#
+#def typeCity():
+#    userInputCity = input("Type in the city: ").title()
+#    userInputBizType = input("Type in biz type: ").title()
+#    c.execute('SELECT * FROM business WHERE city = ? AND typeBusiness  = ?', (userInputCity, userInputBizType) )
+#    for row in c.fetchall():
+#        print(row)
+#        
+#typeCity()        
+#  
+
+
+
+#
+#
+c.close()
+conn.close()
+
+"""
+- postcode 
+> space
+> too short/tool long
+ - make sure you enter full postcode 
+> first character is a letter
+ - please double check you eneterred a correct postcode 
+>lower/uppercase 
+> message for "if not in the database"
+
+
+- city / business 
+> letters only
+> upper/lowercase 
+> message for "if not in the database"
+"""
