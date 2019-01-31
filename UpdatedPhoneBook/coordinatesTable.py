@@ -13,7 +13,6 @@ conn = sqlite3.connect('phonebook.db')
 
 c = conn.cursor()
 
-endpoint="https://api.postcodes.io/postcodes/"
 
 def create_table_coordinates():
     c.execute('CREATE TABLE IF NOT EXISTS coordinates(postcode VARCHAR(10), latitude DECIMAL(10,8), longitude DECIMAL (11,8) ) ')
@@ -21,6 +20,7 @@ def create_table_coordinates():
 create_table_coordinates() 
 
 def populate_table_coordinates_people():
+     endpoint="https://api.postcodes.io/postcodes/"
      c.execute('SELECT postcode FROM people')
      for row in c.fetchall():
         currentpostcode = row[0]

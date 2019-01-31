@@ -1,0 +1,6 @@
+[
+  "ch05_ExternalTestingTools/ch05_martina_test.py::TddInPythonExample::test_calculator_add_method_returns_correct_result",
+  "ch05_ExternalTestingTools/ch05_martina_test.py::TddInPythonExample::test_calculator_returns_error_message_if_both_args_not_numbers",
+  "ch05_ExternalTestingTools/ch05_martina_test.py::TddInPythonExample::test_calculator_returns_error_message_if_x_arg_not_number",
+  "ch05_ExternalTestingTools/ch05_martina_test.py::TddInPythonExample::test_calculator_returns_error_message_if_y_arg_not_number"
+]

@@ -8,11 +8,12 @@ Created on Tue Jan 22 09:39:37 2019
 ####Module 3: Exceptions and validations ####
 
 #Dealing with multiple errors#
-#try:
-#    f = open('testfile.txt')
-#    s1 = not_exist
-#except FileNotFoundError: #Exception : would return correct error for undefined name variable
-#    print("Sorry, this file does not exist, or the file name is wrong. Please double check.")
+#
+try:
+    f = open('testfile.txt')
+    s1 = not_exist
+except FileNotFoundError: #Exception : would return correct error for undefined name variable
+    print("Sorry, this file does not exist, or the file name is wrong. Please double check.")
 
 #Multiple exceptions#
 try:

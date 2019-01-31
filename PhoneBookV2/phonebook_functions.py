@@ -1,12 +1,4 @@
 
-       
-    
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Jan 25 09:27:18 2019
-
-@author: iza
-"""
 
 import sqlite3
 import requests
@@ -53,11 +45,6 @@ def typeBizType(userInputPostcode):
         print(row)
 
 typePostcode()
-       
-          
-        
-        
-
 
 
 
@@ -69,42 +56,6 @@ typePostcode()
 #        print(row)
 #        
 #typeCity()   
-#
 
-
-
-
-#
-#def typeCity():
-#    userInputCity = input("Type in the city: ").title()
-#    userInputBizType = input("Type in biz type: ").title()
-#    c.execute('SELECT * FROM business WHERE city = ? AND typeBusiness  = ?', (userInputCity, userInputBizType) )
-#    for row in c.fetchall():
-#        print(row)
-#        
-#typeCity()        
-#  
-
-
-
-#
-#
 c.close()
 conn.close()
-
-"""
-- postcode 
-> space
-> too short/tool long
- - make sure you enter full postcode 
-> first character is a letter
- - please double check you eneterred a correct postcode 
->lower/uppercase 
-> message for "if not in the database"
-
-
-- city / business 
-> letters only
-> upper/lowercase 
-> message for "if not in the database"
-"""
