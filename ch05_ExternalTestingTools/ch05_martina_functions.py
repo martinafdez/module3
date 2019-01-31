@@ -9,6 +9,7 @@ Created on Wed Jan 30 10:06:06 2019
 ####App development file#####
 
 class Calculator(object):
+    ##Working version##
 #    def add(self, x, y):
 #        number_types=(int, float, complex)
 #        if isinstance(x, number_types) and isinstance( y, number_types):
@@ -16,8 +17,9 @@ class Calculator(object):
 #           return x + y
 #        else:
 #           raise ValueError
-    ##Task 2: Debugging code while testing##
-    #Fail version#
+    
+##Task 2: Debugging code while testing##
+    ##Fail version##
     def add(self, x, y):
         number_types=(int, float, complex)
         if isinstance(x, number_types) and isinstance( y, number_types):
