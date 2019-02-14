@@ -1,0 +1,54 @@
+A3:2017-
+Sensitive Data
+Exposure:
+
+Over the last few years, this has been the most
+common impactful attack. Failure frequently compromises all
+data that should have been protected.
+Typically, this information includes
+sensitive personal information (PII)
+data such as health records, credentials, personal data, and credit cards,
+which often require protection.
+Rather than directly attacking crypto,
+attackers steal keys, execute man-inthe-middle attacks, or steal clear text
+data off the server, while in transit, or
+from the user’s client, e.g. browser.
+To protect:
+-Identify when data is sensitive.
+- Don't store important data if not need to.
+- Encrypt at rest.
+- Ensure strong algorithms
+- Disable cache for responses that have imporant data.
+- Store passwords with strong hashing.
+
+
+
+
+
+A10:2017-
+Insufficient
+Logging &
+Monitoring:
+
+Attackers rely on the lack of
+monitoring and timely response to
+achieve their goals without being
+detected. 
+Most successful attacks start with
+vulnerability probing. Allowing such
+probes to continue can raise the
+likelihood of successful exploit to
+nearly 100%.
+In 2016, identifying a breach took an
+average of 191 days – plenty of time
+for damage to be inflicted.
+
+- no monitoring of suspicious activity
+- no logs of failed logins
+-logs only stored locally
+- no effective or good alerting systems
+- The application is unable to detect, escalate, or alert for active
+attacks in real time or near real time.
+
+
+
