@@ -16,13 +16,20 @@ import requests
 
 
 def getPeople():
-    conn = sqlite3.connect('C:/Users/mluci/Desktop/flask_phonebook/static/db/phonebook.db') 
+    conn = sqlite3.connect('C:/Users/mluci/Desktop/flask_phonebook/phonebook.db') 
     c = conn.cursor()
     c.execute('SELECT * FROM people')
     allPpl = c.fetchall()
     return allPpl
+
+def getBusiness():
+    conn = sqlite3.connect('C:/Users/mluci/Desktop/flask_phonebook/phonebook.db') 
+    c = conn.cursor()
+    c.execute('SELECT * FROM business')
+    allBiz = c.fetchall()
+    return allBiz
      
-#
+
 #def typePostcodeOrCity():
 #    userInputPostcodeOrCity = input("Type in city or postcode: ")
 #
