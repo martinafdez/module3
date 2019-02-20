@@ -7,6 +7,7 @@ phonebook = Phonebook()
 
 @app.route('/')
 def hello_world():
+    
     return render_template("layouts/basepage.html")
 
 
