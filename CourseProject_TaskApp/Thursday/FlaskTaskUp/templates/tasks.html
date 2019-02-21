@@ -1,0 +1,46 @@
+{% extends "template.html" %}
+      {% block content %}
+    <h1>Tasks List</h1>
+
+    <a href="addtasks"><button type="button" class="btn btn-primary mt-3"><b>+</b> Create a task</button></a>
+
+    <form method="post" action="/confirmation-task-delete" class="mt-3">
+      <label for="task-del">Task to delete:</label>
+      <input type="task-del" id="task-del" name="task-del" placeholder="Insert Task id" required="required">
+      <input type="submit" id="submit-button" name="submit" value="Submit">
+    </form>
+
+    <!--{{ tasks }}       -->
+    <div class="row mt-5">
+    <div class="col-md-12 col-lg-12 col-sm-12">
+        <form>
+        <table id="example" class="table table-striped table-bordered table-hover">
+            <thead>
+            <tr>
+                <th>Task ID</th>
+                <th>Task</th>
+                <th>Date</th>
+                <th>Priority</th>
+                <th>Status</th>
+                <th>Description</th>
+            </tr>
+
+            </thead>
+            <tbody>
+
+            {% for row in tasks.items() %}
+            <tr>
+                <td>{{row[0]}}</td>
+                <td>{{row[1][0]}}</td>
+                <td>{{row[1][1]}}</td>
+                <td>{{row[1][2]}}</td>
+                <td>{{row[1][3]}}</td>
+                <td>{{row[1][4]}}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+      </form>
+
+    </div>
+    {% endblock %}

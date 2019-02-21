@@ -1,0 +1,16 @@
+{% extends "template.html" %}
+  {% block content %}
+  <form method="post" action="/confirmation">
+    <label for="task">Task:</label>
+    <input type="task" id="task" name="task" required="required" width="30px"><br>
+    <label for="deadline">Deadline: </label>
+    <input type="deadline" id="deadline" name="deadline" required="required">
+    <label for="priority">Priority: </label>
+    <input type="priority" id="priority" name="priority" required="required"><br>
+    <label for="status">Status: </label>
+    <input type="status" id="status" name="status" required="required">
+    <label for="description">Description: </label>
+    <input type="description" id="description" name="description" required="required">
+    <input type="submit" id="submit-button" name="submit" value="Submit" class="pl-2">
+  </form>
+  {% endblock %}

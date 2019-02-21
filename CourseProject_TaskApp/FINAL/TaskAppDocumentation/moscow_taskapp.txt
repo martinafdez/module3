@@ -1,0 +1,30 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Feb 18 14:20:44 2019
+
+@author: Skitt
+"""
+
+#--------------------- MUST HAVE --------------------#
+
+A database with 2 tables: 
+
+- User table which will have the columns: User ID, name, Surname and Email. 
+
+- Task table which will have the columns: User ID (foreign key to the user table), a Task ID, Tasks, Date, Priority, Status and extra info. 
+
+- User adds a task and each task added will generate a unique ID. 
+
+#------------------ COULD HAVE --------------------#
+
+- An edit feature next to each row 
+- Having delete buttons 
+- a login page
+- form for editing task
+- The user can fill out the login fields to create a user ID (primary key). 
+ 
+#------------------ WOULD HAVE --------------------#
+
+- Have multiple loginsthat could be stored in seperate table in database. 
+- Customise user profile 
+- integration tests

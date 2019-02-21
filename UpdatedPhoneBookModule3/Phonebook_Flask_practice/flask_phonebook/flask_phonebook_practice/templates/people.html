@@ -1,0 +1,29 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <table>
+        <thead>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>Country</th>
+        <th>Postcode</th>
+        <th>Telephone</th>
+        
+        </thead>
+        <tbody>
+        {% for row in ppl %}
+            <tr>
+                <td>{{row[0]}}</td>
+                <td>{{row[1]}}</td>
+                <td>{{row[2]}}</td>
+                <td>{{row[3]}}</td>
+                <td>{{row[4]}}</td>
+                <td>{{row[5]}}</td>
+                <td>{{row[6]}}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
