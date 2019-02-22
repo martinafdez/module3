@@ -1,0 +1,14 @@
+{% extends "template.html" %}
+     {% block content %}
+     <div class=page>
+       <h1>Task  List</h1>
+       <ul class=tasks>
+       {% for taskId in tasks %}
+       <form action="{{ url_for('del_tasks') }}" method=post class=delete-task>
+           <input type=hidden value="{{ taskId.name }}"name=task-to-delete"></input>
+           <input type=submit>
+      </form>
+         {% endfor %}
+         </ul>
+     </div>
+  {% endblock %}

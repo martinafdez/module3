@@ -1,0 +1,42 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Feb 19 14:55:44 2019
+
+@author: Fabiana
+"""
+
+***TO ADD
+- Update task
+- Delete a task
+
+
+***What the app is doing:
+    
+- Input task
+- See single task
+- Edit single task
+- Delete task
+- See all the tasks 
+
+------------
+IZA
+- Create function to update a task
+- Create function to delete a task
+
+FABI
+- login page
+- all tasks page
+- edit task page 
+- detail page for the task
+
+MARTINA
+- Flask POST request ( to create a task)
+- Flask DELETE request (to delete a task)
+- Flask GET request (to get the list of the tasks)
+- Flask to edit a request [We need to check online the answer
+
+AMINA
+- Validation Test
+- Jinja
+- Integration Test
